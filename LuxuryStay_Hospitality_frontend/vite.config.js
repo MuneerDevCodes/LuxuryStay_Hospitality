@@ -5,4 +5,11 @@ import svgr from 'vite-plugin-svgr'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(),  svgr()],
+  server: {
+    proxy: {
+      '/api': 'http://localhost:4000',
+      '/uploads': 'http://localhost:4000',
+      '/health': 'http://localhost:4000',
+    },
+  },
 })

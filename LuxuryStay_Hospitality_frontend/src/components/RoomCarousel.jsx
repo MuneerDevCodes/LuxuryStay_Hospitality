@@ -89,7 +89,7 @@ const RoomCarousel = ({ hotelId }) => {
             {currentRooms.map((room) => {
               const roomImage =
                 room.images && room.images.length > 0
-                  ? `${import.meta.env.VITE_API_URL}/uploads/${room.images[0]}`
+                  ? `/uploads/${room.images[0]}`
                   : 'https://placehold.co/600x400?text=Room+Image';
 
               return (

@@ -114,7 +114,7 @@ const RoomDetailPage = () => {
   // Get image URL (first image or default)
   const roomImage =
     images && images.length > 0
-      ? `${import.meta.env.VITE_API_URL}/uploads/${images[0]}`
+      ? `/uploads/${images[0]}`
       : "/src/assets/img/room.jpg";
 
   return (

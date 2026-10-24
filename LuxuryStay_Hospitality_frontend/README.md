@@ -49,27 +49,14 @@ This is the frontend application for the LuxuryStay Hospitality hotel management
    npm install
    ```
 
-4. Create environment file:
-   ```bash
-   cp .env.example .env
-   ```
-
-5. Configure environment variables in `.env` file (see Environment Variables section below)
-
-6. Start the development server:
+4. Start the development server:
    ```bash
    npm run dev
    ```
 
 ## Environment Variables
 
-Create a `.env` file in the root of the frontend directory and add the following variables:
-
-```
-VITE_API_URL=http://localhost:5000
-```
-
-- `VITE_API_URL`: The base URL for API requests to the backend server (default: http://localhost:5000)
+The frontend uses same-origin `/api` and `/uploads` paths, so no API URL is required. In production, Vercel rewrites these paths to the backend service.
 
 ## Available Scripts
 
@@ -124,6 +111,8 @@ The application communicates with the backend server using Axios for API calls. 
 - `/api/config` - System configuration
 
 ## Deployment
+
+The repository root `vercel.json` deploys the frontend and backend as separate Vercel services. The frontend receives public page traffic; `/api`, `/uploads`, and `/health` are routed to the backend.
 
 To build the application for production:
 

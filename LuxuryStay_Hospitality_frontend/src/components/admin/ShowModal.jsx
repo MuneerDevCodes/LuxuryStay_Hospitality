@@ -10,7 +10,7 @@ const ShowModal = ({ isOpen, onClose, title, data }) => {
           {value.map((image, index) => (
             <img
               key={index}
-              src={`${import.meta.env.VITE_API_URL}/uploads/${image}`}
+              src={`/uploads/${image}`}
               alt={`${key} ${index + 1}`}
               className="w-20 h-20 object-cover rounded"
             />
